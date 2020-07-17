@@ -18,15 +18,11 @@ android {
             main {
                 python {
                     srcDirs = ["src/main/python"]
-                    /*pyc {
-                        src false
-                    }*/
                 }
             }
         }
         python {
-            buildPython "C:/Users/Foysal/Anaconda3"
-            buildPython "python3"
+            buildPython "C:/Users/Foysal/Anaconda3/python.exe"
 
         }
         ndk {

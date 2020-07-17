@@ -7,10 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1tEx-yI3mv1ZV0Swco1wcbT-Wc2JmwwwS
 """
 
-from PIL import Image
+
 import os
-from pylab import *
-import re
+#from pylab import *
 from PIL import Image, ImageChops, ImageEnhance
 
 def convert_to_ela_image(path, quality):
