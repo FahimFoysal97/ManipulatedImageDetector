@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python'
 
 android {
     compileSdkVersion 28
@@ -6,12 +7,32 @@ android {
 
     defaultConfig {
         applicationId "com.example.manipulatedimagedetector"
+
         minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        sourceSets {
+            main {
+                python {
+                    srcDirs = ["src/main/python"]
+                    /*pyc {
+                        src false
+                    }*/
+                }
+            }
+        }
+        python {
+            buildPython "C:/Users/Foysal/Anaconda3"
+            buildPython "python3"
+
+        }
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+
     }
 
     buildTypes {
@@ -20,6 +41,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '28.0.3'
 
 }
 
