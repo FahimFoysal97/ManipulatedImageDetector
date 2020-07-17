@@ -11,6 +11,8 @@ Original file is located at
 import os
 #from pylab import *
 from PIL import Image, ImageChops, ImageEnhance
+import numpy as np
+
 
 def convert_to_ela_image(path, quality):
     filename = path
@@ -35,6 +37,7 @@ def convert_to_ela_image(path, quality):
 
 def get(path):
   X = []
-  X.append(array(convert_to_ela_image(path, 90).resize((128, 128))).flatten() / 255.0)
+  X.append(np.array(convert_to_ela_image(path, 90).resize((128, 128))).flatten() / 255.0)
   X = X.reshape(-1, 128, 128, 3)
+  print(X)
   return X;

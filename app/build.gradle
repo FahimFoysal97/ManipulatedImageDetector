@@ -23,7 +23,13 @@ android {
         }
         python {
             buildPython "C:/Users/Foysal/Anaconda3/python.exe"
+            pyc {
+                src false
+            }
+            pip {
+                install "pillow"
 
+            }
         }
         ndk {
             abiFilters "armeabi-v7a", "x86"

@@ -1,4 +1,4 @@
-package com.example.manipulatedimagedetector;
+package com.project.manipulatedimagedetector;
 
 import org.junit.Test;
 
